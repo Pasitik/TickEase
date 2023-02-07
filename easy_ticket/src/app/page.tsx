@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
+import Link from 'next/link'
 import styles from './page.module.css'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -20,7 +21,7 @@ export default function Home() {
             <p className=' text-2xl font-poppins'>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
             </p>
-            <button className=' bg-[#00df9a] hover:bg-[#279070] mr-10 my-7 px-12 py-4 rounded-full font-poppins font-bold'>Join</button>
+            <Link href="" className=' bg-[#00df9a] hover:bg-[#279070] mr-10 my-7 px-12 py-4 rounded-full font-poppins font-bold'>Join</Link>
 
           </div>
         </div>
@@ -36,7 +37,7 @@ export default function Home() {
             <p className=' text-2xl font-poppins'>
               We've got you covered! Book a bus ticket today with ease.
             </p>
-            <button className=' bg-[#00df9a] hover:bg-[#279070] mr-10 my-7 px-12 py-4 rounded-full font-poppins font-bold'>Book Now!</button>
+            <Link href="./means/bus" className=' bg-[#00df9a] hover:bg-[#279070] mr-10 my-7 px-12 py-4 rounded-full font-poppins font-bold'>Book Now!</Link>
 
           </div>
         </div>

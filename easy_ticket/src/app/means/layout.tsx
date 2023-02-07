@@ -14,8 +14,8 @@ export default function RootLayout({
       */}
       <head />
       <body>
-        <div className=''>
-        <div className=' absolute z-10'>
+        <div className=' w-full'>
+        <div className=' w-full absolute z-10'>
             <Nav/>
         </div>
         <div>{children}</div>

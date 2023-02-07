@@ -1,5 +1,6 @@
 import React from 'react'
 import { busData } from './busData'
+import TypedHoook from "./typedHook"
 
 
 interface ibusData {
@@ -15,33 +16,33 @@ const Bus:React.FC<ibusData> = () => {
     <div className=' '>
         <div className=' bg-[url("https://images.pexels.com/photos/68629/pexels-photo-68629.jpeg?auto=compress&cs=tinysrgb&w=600")] bg-no-repeat bg-cover bg-center h-[50vh] w-full relative'>
             <h1 className=' m-auto text-white font-bold shadow-2xl text-5xl flex absolute top-[40%] left-[25%]'>Welcome</h1>
-            <div className=' bg-slate-200 rounded-xl shadow-black absolute top-[65%]  left-[22%] max-w-[80%]'>
+            <div className=' bg-slate-200 rounded-xl shadow-black absolute top-[65%] md:top-[85%]  left-[22%] max-w-[80%]'>
                 <form className=' ' >
-                    <div className='flex flex-col mx-5 my-5'>
-                    <div className='mb-5'>
+                    <div className='flex flex-col mx-5 my-5 md:flex-row md:mx-'>
+                    <div className='mb-5 md:mx-10'>
                         <label>From: </label>
                         <input type='text' className=' border-solid border-[#00df9a] border-2 rounded-lg' />
                     </div>
-                   <div className='mb-5 relative'>
+                   <div className='mb-5 relative md:static'>
                         <label>To: </label>
-                        <input type='text' className='border-solid border-2 border-[#00df9a] rounded-lg absolute right-0' />
+                        <input type='text' className='border-solid border-2 border-[#00df9a] rounded-lg absolute right-0 md:static' />
                    </div>
-                   <div className='relative'>
+                   <div className='md:mx-10 relative md:static'>
                         <label>Date: </label>
-                        <input type='date' className='border-solid border-2 border-[#00df9a] rounded-lg absolute right-0'/>
+                        <input type='date' className='border-solid border-2 border-[#00df9a] rounded-lg absolute right-0 md:static'/>
                    </div>
-                   <div className='relative my-5'>
-                        <button className=' bg-[#00df9a] text-white rounded-xl absolute right-0 py-1 px-2'>Submit</button>
+                   <div className='relative my-5 md:my-0 md:static'>
+                        <button className=' bg-[#00df9a] text-white rounded-xl absolute right-0 py-1 px-2 md:static'>Submit</button>
                    </div>
                    </div>
                 </form>
             </div>
         </div>
 
-        <div className = " mt-20 flex flex-col items-center">
+        <div className = " mt-20 flex flex-col items-center md:grid md:grid-cols-3 md:gap-2 w-full">
             {busData.map((bus, key) => {
                 return (
-                    <div key={bus.name} className=' flex bg-slate-50 rounded-md shadow-2xl border-solid border-2 w-[80%] h-[30vh] my-10'>
+                    <div key={bus.name} className=' flex bg-slate-50 rounded-md shadow-2xl border-solid border-2 w-[80%] h-[30vh] my-10 mx-auto'>
                     <div className=' w-1/2'>
                         <img src={bus.image} alt={bus.alt} className='h-[30vh] rounded-md'/>
                     </div>
